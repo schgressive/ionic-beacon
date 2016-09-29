@@ -1,0 +1,1 @@
+Implementation based on the article Support iBeacons In Your Ionic Framework Mobile App (https://www.thepolyglotdeveloper.com/2015/09/support-ibeacons-in-your-ionic-framework-mobile-app/).
