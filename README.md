@@ -8,7 +8,7 @@ Ths code was tested on iOS 10.
 
 ### Beacon configuration
 
-This code is not for beacon configuration. To configure the beacons, you'll need specific software (for instance: iBKS Config Tool app - iOS or Android). Check with your beacon provider how to properly make the configuration.
+This code is not for beacon configuration. To configure the beacons, you'll need specific software (for instance: iBKS Config Tool app for iOS or Android). Check with your beacon provider how to properly make the configuration.
 
 ### Ionic View App Not Supported
 
