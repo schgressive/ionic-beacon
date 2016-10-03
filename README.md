@@ -2,7 +2,9 @@
 
 Implementation based on the article Support iBeacons In Your Ionic Framework Mobile App (https://www.thepolyglotdeveloper.com/2015/09/support-ibeacons-in-your-ionic-framework-mobile-app/).
 
-####Important: this code is not for beacon configuration; to configure the beacons, you'll need specific software (for instance: iBKS Config Tool);
+### Beacon configuration
+
+This code is not for beacon configuration. To configure the beacons, you'll need specific software (for instance: iBKS Config Tool app - iOS or Android). Check with your beacon provider how to properly make the configuration.
 
 ### Ionic View App Not Supported
 
