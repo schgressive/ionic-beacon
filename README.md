@@ -1,6 +1,6 @@
 ## Ionic Beacon
 
-Reference implementation based on the article Support iBeacons In Your Ionic Framework Mobile App (https://www.thepolyglotdeveloper.com/2015/09/support-ibeacons-in-your-ionic-framework-mobile-app/). You have to make some changes in this code for your specific needs (for instance, the beacon region name and the beacon UUID in the app.js file).
+Reference implementation based on the article Support iBeacons In Your Ionic Framework Mobile App (https://www.thepolyglotdeveloper.com/2015/09/support-ibeacons-in-your-ionic-framework-mobile-app/). You have to make some changes in this code for your specific needs (for instance, the beacon region name and the beacon UUID in the app.js file). Ths code was tested on iOS 10.
 
 ### Beacon configuration
 
