@@ -1,4 +1,24 @@
 {
   "name": "IonicBeacon",
-  "app_id": ""
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "scss/**/*"
+  ],
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://8kbydbo3i8.execute-api.us-east-1.amazonaws.com/dev"
+    }
+  ],
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1",
+  "watchPatterns": []
 }

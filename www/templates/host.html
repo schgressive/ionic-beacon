@@ -1,0 +1,44 @@
+<ion-view hide-nav-bar="true">
+	<div class="demo-webpage">
+		<iframe class="santander-web" ng-class="{'opa': showLightbox}" src="https://mov.santander.cl/beneficios?segmento=s-personas"></iframe>
+		<div class="demo-content" ng-if="showLightbox">
+			<div class="hero">
+				<div class="user-info" ng-show="showUserInfo">
+					<h1 ng-hide="asEjecutivo">
+						Hola {{lightboxContent.user ? lightboxContent.user.name : 'Invitado'}}
+						<span class="red-box"></span>
+					</h1>
+					<h1 ng-show="asEjecutivo">
+						{{lightboxContent.user ? lightboxContent.user.name : 'Invitado'}} Necesita tu atención
+						<span class="red-box"></span>
+					</h1>
+					<p>{{lightboxContent.text}}</p>
+					<p><small>{{lightboxContent.user.rut}} - {{lightboxContent.user.type}}</small></p>
+				</div>
+				<div class="choose-beacon" ng-show="showChooseBeacon">
+					<ion-list>
+					  <p>Seleccione una opción</p>
+					  <ion-radio ng-model="$parent.$parent.selectedBeacon" ng-value="beacon.uuid || beacon.UUID" ng-repeat="beacon in allBeacons">
+					  	<p>
+					  		<span class="icon" ng-style="{'color': beacon.colorHex}">
+					  			<i class="ion-radio-waves"></i>
+					  		</span>
+					  		{{beacon.name || beacon.NAME}}
+					  	</p>
+					  	</ion-radio>
+					  <button class="button button-full button-positive" ng-click="setBeacon(selectedBeacon)" ng-disabled="selectedBeacon == null">
+  						Configurar como TV
+						</button>
+					  <button class="button button-full button-positive" ng-click="setHostAsEjecutivo(ejecutivoId)">
+  						Configurar como Ejecutivo(a)
+						</button>
+					</ion-list>
+
+				</div>
+			</div>
+		</div>
+		<div class="cancel-watch">
+			<button ng-click="cancelWatch()">RESET</button>
+		</div>
+	</div>
+</ion-view>

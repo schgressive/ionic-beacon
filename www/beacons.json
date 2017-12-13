@@ -1,0 +1,22 @@
+{ 
+	"beacons": {
+		"33600E37309": {
+			"uuid": "33600E37309",
+			"colorHex": "#e08fbf",
+			"name": "MESA1",
+			"desc": "Sala cafeteria numero 1"
+		},
+        "22774E5668": {
+        	"uuid": "22774E5668",
+        	"colorHex": "#d8c617",
+			"name": "LCD1",
+			"desc": "LCD entrada principal"
+        },
+        "36462E13212": {
+        	"uuid": "36462E13212",
+        	"colorHex": "#720d4e",
+			"name": "LCD2",
+			"desc": "LCD Pasillo"
+        }
+	}
+}

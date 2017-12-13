@@ -1,0 +1,18 @@
+<ion-view>
+	<ion-content class="main-view">
+	      <div class="list">
+	          <div class="item-divider">
+	            <p class="text-center">Ingresa tu RUT</p>
+	          </div>
+	            <div class="item item-input-inset">
+				    <label class="item-input-wrapper">
+				      <input type="text" ng-model="rut" placeholder="16095899-5">
+				    </label>
+				    <button class="button button-small white-i" ng-click="getUserInfo(rut)" ng-disabled="rut.length < 9">
+				      Enviar
+				    </button>
+				  </div>
+	      </div>
+	      <iframe class="santander-web" src="https://www.santander.cl/workcafe/index.asp"></iframe>
+	</ion-content>
+</ion-view>

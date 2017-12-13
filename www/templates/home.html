@@ -1,0 +1,56 @@
+<ion-view>
+	<ion-content class="main-view">
+		<div class="main-content">
+	      <div class="red-bar text-center">
+	          ¡Hola {{userName}}!
+	      </div>
+	      <div class="list">
+	          <div class="item-divider">
+	            <p class="text-center" ng-click="toggleMode()">Dispositivos cercanos</p>
+	          </div>
+	          <div class="item" ng-show="isEmpty(currentBeacons)">
+	          	<p class="text-center">En este momento no hay dispositivos cercanos</p>
+	          </div>
+	          <div class="item" ng-repeat="(k, beacon) in currentBeacons | orderObjectBy:'-accuracy'" ng-show="debugMode">
+	              <div class="row">
+	                  <div class="col truncate title-beacon col-100">
+	                      <span class="icon" ng-style="{'color': beacon.color}">
+	                        <i class="ion-radio-waves"></i>
+	                      </span>
+	                      <span class="name">{{beacon.name}}</span>
+	                  </div>
+	               </div>
+	              <div class="row">
+	                  <div class="col col-100">
+	                      <p class="text-center">
+	                      	<small class="name">{{beacon.desc}}</small>
+	                      </p>
+	                   </div>
+	              </div>
+	              <div class="row signal-li">
+	              	<div class="col col-33 signal" ng-class="{'green': beacon.accuracy > 0 && beacon.accuracy <= 15}"></div>
+	              	<div class="col col-33 signal" ng-class="{'green': beacon.accuracy > 0 && beacon.accuracy < 15}"></div>
+	              	<div class="col col-33 signal" ng-class="{'green': beacon.accuracy > 0 && beacon.accuracy < 1}"></div>
+	                  
+	              </div>
+
+	              <div class="row action-buttons">
+	              	<div class="col" ng-show="beacon.type == 1 ">
+	              		<button class="button button-full" ng-click="showTVinfo(beacon)">Ver Info</button>
+	              	</div>
+	              	<div class="col" ng-show="beacon.type == 2">
+	              		<button class="button button-full"  ng-click="showContactar(beacon)">Contactar Ejecutivo</button>
+	              	</div>
+	              	<div class="col" ng-show="beacon.type == 3">
+	              		<button class="button button-full"  ng-click="showHorario(beacon)">Ver Horario</button>
+	              	</div>
+	              </div>
+	          </div>
+	      </div>
+	   </div>
+      <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+      	<iframe class="santander-web " src="https://www.santander.cl/workcafe/index.asp"></iframe>
+      	<!-- headless "https://mov.santander.cl/beneficios?segmento=s-personas" -->
+      </div>
+	</ion-content>
+</ion-view>

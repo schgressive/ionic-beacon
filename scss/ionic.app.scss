@@ -17,7 +17,176 @@ $dark:                            #444 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
+$red: #ec0000;
+$dark-red: #b30000;
+$stable: $red;
+
+div, p, h1, button, h3{
+	font-family: 'Open Sans', sans-serif !important;
+}
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.brand-icon{
+    height: 40px;
+    width: 200px;
+    display: block;
+    margin: auto;
+	background-image: url(../img/logo-santander.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.red-bar{
+	background-color: $dark-red;
+	height: 30px;
+	color: white;
+	font-weight: bolder;
+	margin: 10px 0px;
+	padding: 5px;
+	text-transform: uppercase;
+}
+
+.bar-header, .main-bar{
+	background-image: none !important;
+}
+
+.main-view{
+	background-color: $red;
+	color: white;
+	border-top: 0 solid transparent;
+
+	.item-divider p{
+		margin: 0;
+		font-weight: bolder;
+	}
+
+	.title-beacon{
+		text-align: center;
+    	font-size: 24px;
+	}
+
+	.list .item{
+		padding: 0;
+    	padding-top: 5px;
+	}
+}
+
+.signal-li{
+	.signal{
+		border-bottom: 3px solid;
+		border-color: lightgray;
+		&.green{
+			border-color: green;
+		}
+
+	}
+}
+.force-show{
+	display: block !important;
+}
+
+.white-i{
+	color: white !important;
+}
+
+.main-content{
+	margin-top: -10px;
+    padding-top: 10px;
+	background-color: $red;
+	z-index: 1;
+}
+
+iframe.santander-web{
+	width: 100% !important;
+    height: 800px !important;
+    -webkit-overflow-scrolling: auto; /* para el scroll inmediatamente */
+    &.opa{
+    	opacity: 0.7;
+    }
+    &.headless{
+    	position: relative;
+    	top: -40px;
+    	@media(min-width: 991px){
+    		top: -105px;
+    		z-index: -1;
+    	}
+    }
+}
+
+.demo-content{
+	position: absolute;
+    height: 300px;
+    width: 90%;
+    background-color: #768086;
+    top: 200px;
+    margin: auto;
+    display: block;
+    left: 5%;
+    border-radius: 10px;
+	background-image: url(../img/person.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+	-webkit-box-shadow: 10px 10px 52px -10px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 52px -10px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 52px -10px rgba(0,0,0,0.75);
+    .hero{
+    	width: 50%;
+	    margin-left: 50%;
+	    color: white;
+	    height: 100%;
+	    padding: 5%;
+    }
+
+    h1{
+    	color: white;
+    	font-weight: bolder;
+    	text-transform: uppercase;
+    }
+}
+
+.action-buttons{
+	.button{
+		color: white;
+	    border: 1px solid white;
+	    border-radius: 10px;
+	    font-weight: bolder;
+	    text-transform: uppercase;
+	}
+}
+
+.cancel-watch{
+	position: fixed;
+    bottom: 10px;
+    background: transparent;
+    opacity: 0.1;
+    z-index: 999999;
+}
+
+.contact-ejecutivo{
+	.popup{
+		width: 300px;
+	}
+
+	.popup-head{
+		display: none;
+	}
+
+	h3{
+		font-size: 20px;
+    	text-align: center;
+    	font-weight: bolder;
+	}
+	img{
+		width: 100%;
+	}
+	.button{
+		color: white;
+    	font-weight: bolder;
+	}
+}
+
+.paddingTop-90{
+	padding-top: 55px !important;
+}
